@@ -1,0 +1,158 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Distribution Function With Respect to Bose-Einstien, Fermi-Dirac and Boltzmann}
+\author{Nikhil Simon Toppo (IMH/10021/22)}
+\date{}
+\begin{document}
+\maketitle
+
+\newpage
+
+\section*{Introduction}
+
+Distribution functions are mathematical functions that explain the likelihood
+or probability of various events or values occurring within a given set of data
+or a random variable. They are used in statistics and probability theory. The
+probability distribution of data may be summarized and analyzed using these
+functions, which is useful for comprehending and drawing conclusions about a
+variety of events. There are various distribution function types, each with a
+particular use, such as probability density functions (PDFs) and cumulative
+distribution functions (CDFs).
+
+\section{Bose-Einstein Distribution Function}
+
+\subsection*{Boson}
+Bosons are particles that do not obey the Pauli exclusion principle, which
+means multiple bosons can occupy the same quantum state without any
+restriction. Examples include photons (particles of light), gluons (particles
+that mediate the strong nuclear force), and many composite particles like
+mesons.
+
+\subsection*{Distribution Function}
+The Bose-Einstein distribution function describes the probability of finding a
+boson in a particular energy state. It's based on the idea that bosons prefer
+to occupy the same energy state, leading to an increasing probability as more
+bosons occupy the state.
+
+\begin{equation}
+    f(E)=\frac{1}{\exp((E-\mu)/kT)-1}
+\end{equation}
+
+\begin{enumerate}
+    \item $E$ is the energy of the state
+    \item $\mu$ is the chemical potential, which determines the average number of particles in the system.
+    \item $k$ is the Boltzmann Constant.
+    \item $T$ is the temperature.
+\end{enumerate}
+
+\subsection*{Behaviour at Low Temperature}
+At very low temperatures, close to absolute zero (0 Kelvin or -273.15 degrees
+Celsius), the behavior of the Bose-Einstein distribution is characterized by:
+\begin{enumerate}
+    \item \textbf{Bose-Einstein Condensation :-} As the temperature approaches absolute zero, the exponential term in the denominator of the distribution function becomes much larger than 1, making it approximately equal to 0. In this limit, the distribution function becomes dominated by the numerator, which simplifies to a constant value. This means that a significant fraction of bosons occupy the lowest energy state available, resulting in a phenomenon called Bose-Einstein condensation.
+    \item \textbf{Macroscopic Quantum State:-} Bose-Einstein condensation is a quantum mechanical effect where a macroscopic number of bosons, often referred to as a "Bose-Einstein condensate," occupy the same lowest energy state. This state is characterized by remarkable quantum coherence and phenomena such as superfluidity and superconductivity.
+\end{enumerate}
+
+\subsection*{Behaviour at High temperature}
+Bose-Einstein condensation is a quantum mechanical effect where a macroscopic
+number of bosons, often referred to as a "Bose-Einstein condensate," occupy the
+same lowest energy state. This state is characterized by remarkable quantum
+coherence and phenomena such as superfluidity and superconductivity.
+
+\begin{enumerate}
+    \item \textbf{Dilute Gas:-} At high temperatures, the boson gas behaves like a dilute gas of non-interacting particles, and the distribution of particles among energy states resembles the behavior of classical particles.
+    \item \textbf{Low Occupancy of Low-Energy States:-} Unlike at low temperatures, where many bosons occupy the lowest energy state, at high temperatures, there is a more even distribution of particles across energy levels, and the occupancy of the lowest state decreases.
+\end{enumerate}
+
+\section{Fermi-Dirac Distribution Function}
+
+\subsection*{Fermions}
+Fermions are particles that obey the Pauli exclusion principle, which means
+that no two fermions can occupy the same quantum state simultaneously. Examples
+include electrons, protons, and neutrons.
+
+\subsection*{Distribution Function}
+The Fermi-Dirac distribution function describes the probability of finding a
+fermion in a particular energy state. It reflects the fact that fermions cannot
+easily share quantum states.
+
+\begin{equation}
+    f(E)=\frac{1}{\exp((E-\mu)/kT)+1}
+\end{equation}
+
+\begin{enumerate}
+    \item $E$ is the energy of the state
+    \item $\mu$ is the chemical potential, which determines the average number of particles in the system.
+    \item $k$ is the Boltzmann Constant.
+    \item $T$ is the temperature.
+\end{enumerate}
+
+\subsection*{Behaviour at Low Temperatrue}
+At very low temperatures, much lower than what is called the "Fermi
+temperature" (a characteristic temperature scale for fermions), the behavior of
+the Fermi-Dirac distribution is characterized by:
+
+\begin{enumerate}
+    \item \textbf{Fermi-Dirac Cut-off} The distribution function approaches a step function. It sharply drops to 0 for energy states below the Fermi energy level (E\_F) and rises to 1 for energy states above E\_F. This cut-off behavior is a result of the Pauli exclusion principle, which states that no two fermions can occupy the same quantum state. At low temperatures, all states below E\_F are filled, and all states above E\_F are empty.
+    \item \textbf{Nearly All States Filled:-} At very low temperatures, nearly all available energy states below the Fermi energy are occupied, and almost no states above it are occupied. This leads to a high degree of order and results in the behavior of fermions known as "Fermi-Dirac degeneracy." The system is characterized by minimal thermal excitations.
+\end{enumerate}
+
+\subsection*{Behaviour at High Temperature}
+At temperatures much higher than the Fermi temperature, the behavior of the
+Fermi-Dirac distribution is quite different:
+
+\begin{enumerate}
+    \item \textbf{Approaching Maxwell-Boltzmann Distribution:-} As the temperature increases significantly above the Fermi temperature, the sharp cut-off behavior of the distribution smoothes out. The Fermi-Dirac distribution approaches the classical Maxwell-Boltzmann distribution, which describes the statistics of classical particles.
+    \item \textbf{Partial Occupation of States:-} At high temperatures, thermal excitations lead to the partial occupation of energy states both below and above the Fermi energy. The strict occupation of states below E\_F breaks down as thermal energy allows some particles to occupy higher energy states.
+\end{enumerate}
+
+\section{Maxwell-Boltzmann Distribution Function}
+\subsection*{Classical Particles}
+Maxwell-Boltzmann statistics are applicable to classical particles, which means
+they are not subject to quantum mechanical effects like the Pauli exclusion
+principle. Examples include gas molecules in a non-relativistic regime.
+
+\subsection*{Distribution Function}
+The Maxwell-Boltzmann distribution function describes the probability
+distribution of particle velocities in a gas.
+
+\begin{equation}
+    f(v)=4\pi(\frac{m}{2\pi kT})^{3/2} v^2\exp(-\frac{mv^2}{2kT})
+\end{equation}
+
+\begin{enumerate}
+    \item $v$ is the velocity of the particle.
+    \item $m$ is the mass of the particle.
+    \item $k$ is the Boltzmann constant.
+    \item $T$ is the temperature.
+\end{enumerate}
+
+\subsection*{Behaviour at High Temperature}
+\begin{enumerate}
+    \item \textbf{Exponential Tail:-} At low temperatures, the Maxwell-Boltzmann distribution exhibits a long exponential tail in the high-energy region. This means that there is still a non-zero probability of particles having very high kinetic energies, even though the probability decreases rapidly as energy increases.
+    \item \textbf{Peak at Low Energies:-} The distribution retains its characteristic bell-shaped curve, with the peak occurring at lower kinetic energies. As temperature decreases, the peak becomes narrower and shifts toward lower energies.
+    \item \textbf{Decreased Average Kinetic Energy:-} At lower temperatures, the average kinetic energy of the particles in the system decreases. This is a direct consequence of the Boltzmann factor in the distribution, which depends on the reciprocal of the temperature (1/T). As T decreases, the Boltzmann factor decreases, reducing the probability of higher-energy states.
+\end{enumerate}
+
+\subsection*{Behaviour at Low Temperature}
+
+\begin{enumerate}
+    \item \textbf{Higher Average Kinetic Energy:-} At high temperatures, the Maxwell-Boltzmann distribution shifts to the right, and the peak of the distribution occurs at higher kinetic energies. This means that, on average, particles in the system possess more kinetic energy.
+    \item \textbf{Broadening of the Distribution:-} The distribution becomes wider and flatter at high temperatures, with a greater spread of kinetic energies. This results in a higher probability of finding particles with a wide range of kinetic energies.
+    \item \textbf{Exponential Decay of High-Energy Tails:-} While there is still a tail in the distribution that extends to higher kinetic energies, the probability of particles having extremely high kinetic energies decreases rapidly as temperature increases. This behavior is described by an exponential decrease in the tail.
+\end{enumerate}
+
+\end{document}
